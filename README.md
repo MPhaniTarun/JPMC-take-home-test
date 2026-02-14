@@ -112,7 +112,7 @@ python --version
 macOS/Linux:
 
 ```bash
-python -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
@@ -202,5 +202,6 @@ The notebook covers:
 ## Notes
 
 - Full execution can take significant time when hyperparameter trials are high.
-- If you only want a quick run, reduce tuning trials in modeling cells.
+- I ran the full tuning with `hp_tuning_trails = 200`.
+- For code review or quick validation, `hp_tuning_trails = 2` is usually sufficient and executes much faster.
 - Final written analysis is available in `report/report.pdf`.
